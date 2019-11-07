@@ -27,7 +27,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
         if (single_item_view == null)
             single_item_view = inflater.inflate(R.layout.single_item, null);
         //Todo get single player using position and listOfPlayers
-        // get references to views in single_item.xml via
+        // get references to views in single_item.xml , for example
         //        TextView name = single_item_view.findViewById(R.id.name);
         return  single_item_view;
     }

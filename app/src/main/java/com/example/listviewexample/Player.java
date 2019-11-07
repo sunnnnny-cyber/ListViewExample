@@ -5,4 +5,5 @@ public class Player {
         // Todo 5 member variables
         //Todo name, age, worth(money), main sport and int image resource from drawable
         //Todo create constructor and getters and setters
+        // use Android Studio for fast writing code, find Code->Generate
 }

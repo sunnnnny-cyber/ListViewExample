@@ -14,11 +14,15 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    //Todo reference listview
-    //  Todo       ListView listView = findViewById();
-    // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
+        //Todo reference listview
+        //  Todo       ListView listView = findViewById();
+        ListView ListView = findViewById(R.id.listview);
+        // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
         //Todo  add custom adapter to listview
         //Todo listView.setAdapter(------);
+        MyAdapter arrayAdapter = new MyAdapter(this,R.layout.custom_item, myImageNameList);
+        ListView.setAdapter(arrayAdapter);
+
 
     }
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>

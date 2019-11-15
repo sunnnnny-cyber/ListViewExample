@@ -40,6 +40,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
         age.setText("age: "+listOfPlayers.get(position).age);
         money.setText("worth: "+listOfPlayers.get(position).worth);
         money.setText("sport: "+listOfPlayers.get(position).main_sport);
+
         //Todo get single player using position and listOfPlayers
         // get references to views in single_item.xml , for example
         // TextView name = single_item_view.findViewById(R.id.name);

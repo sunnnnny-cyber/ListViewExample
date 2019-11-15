@@ -2,6 +2,67 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+<<<<<<< Updated upstream
 <!-- Todo create ImageView and 4 textviews -->
 <!--  Todo image on the left and text parallel to the image-->
+=======
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:background="#f59aed"
+        >
+
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:id="@+id/ima"
+
+            />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:weightSum="4"
+
+           >
+
+           <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+               android:layout_weight="1"
+               android:id="@+id/name"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:id="@+id/age"
+               />
+
+
+
+           <TextView
+           android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:id="@+id/money"
+           />
+
+
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:id="@+id/sport"
+               />
+
+
+
+       </LinearLayout>
+>>>>>>> Stashed changes
 </LinearLayout>

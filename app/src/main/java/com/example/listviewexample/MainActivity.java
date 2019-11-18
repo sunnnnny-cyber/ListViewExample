@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity  {
     }
     public void getPlayers() {
         listPlayers = new ArrayList<>();
-        listPlayers.add(new Player("Usain St Leo Bolt",33,90000000,"Track and Field",(ImageView) findViewById(R.id.)));
-        listPlayers.add(new Player());
+        listPlayers.add(new Player("Usain St Leo Bolt",33,(long)90000000,"Track and Field",R.drawable.bolt));
+        listPlayers.add(new Player("Kobe Bryant",41,(long)500000000,"Basketball",R.drawable.kobe));
         listPlayers.add(new Player());
         listPlayers.add(new Player());
         listPlayers.add(new Player());

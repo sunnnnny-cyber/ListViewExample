@@ -1,6 +1,7 @@
 package com.example.listviewexample;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
     List<Player> listOfPlayers;
     Context context;
 
+
     public MyAdapter(@NonNull Context context, int resource, @NonNull List<Player> objects) {
         super(context, resource, objects);
         listOfPlayers = objects;
@@ -31,19 +33,16 @@ public class MyAdapter extends ArrayAdapter<Player> {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (single_item_view == null)
             single_item_view = inflater.inflate(R.layout.single_item, null);
-        TextView name=(TextView)single_item_view.findViewById(R.id.name);
-        TextView age=(TextView)single_item_view.findViewById(R.id.age);
-        TextView money=(TextView)single_item_view.findViewById(R.id.money);
-        TextView sport=(TextView)single_item_view.findViewById(R.id.sport);
-        ImageView ima=(ImageView)single_item_view.findViewById(R.id.ima);
+        TextView name=(TextView) single_item_view.findViewById(R.id.name);
+        TextView age=(TextView) single_item_view.findViewById(R.id.age);
+        TextView money=(TextView) single_item_view.findViewById(R.id.money);
+        TextView sport=(TextView) single_item_view.findViewById(R.id.sport);
+        ImageView ima=(ImageView) single_item_view.findViewById(R.id.ima);
         name.setText("name: "+listOfPlayers.get(position).name);
         age.setText("age: "+listOfPlayers.get(position).age);
-        money.setText("worth: "+listOfPlayers.get(position).worth);
-        money.setText("sport: "+listOfPlayers.get(position).main_sport);
-
-        //Todo get single player using position and listOfPlayers
-        // get references to views in single_item.xml , for example
-        // TextView name = single_item_view.findViewById(R.id.name);
+        money.setText("money: "+listOfPlayers.get(position).worth);
+        sport.setText("sport: "+listOfPlayers.get(position).main_sport);
+        ima.setImageDrawable(listOfPlayers.get(position).image.getDrawable());
         return  single_item_view;
     }
 }

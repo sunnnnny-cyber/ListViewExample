@@ -1,6 +1,7 @@
 package com.example.listviewexample;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +16,8 @@ import java.util.List;
 
 public class MyAdapter extends ArrayAdapter<Player> {
     List<Player> listOfPlayers;
-<<<<<<< Updated upstream
-=======
     Context context;
 
-
->>>>>>> Stashed changes
     public MyAdapter(@NonNull Context context, int resource, @NonNull List<Player> objects) {
         super(context, resource, objects);
         listOfPlayers = objects;
@@ -40,10 +37,11 @@ public class MyAdapter extends ArrayAdapter<Player> {
         TextView money=(TextView) single_item_view.findViewById(R.id.money);
         TextView sport=(TextView) single_item_view.findViewById(R.id.sport);
         ImageView ima=(ImageView) single_item_view.findViewById(R.id.ima);
-
-        //Todo get single player using position and listOfPlayers
-        // get references to views in single_item.xml , for example
-        //        TextView name = single_item_view.findViewById(R.id.name);
+        name.setText("name: "+listOfPlayers.get(position).name);
+        age.setText("age: "+listOfPlayers.get(position).age);
+        money.setText("money: "+listOfPlayers.get(position).worth);
+        sport.setText("sport: "+listOfPlayers.get(position).main_sport);
+        ima.setImageDrawable(listOfPlayers.get(position).image.getDrawable());
         return  single_item_view;
     }
 }

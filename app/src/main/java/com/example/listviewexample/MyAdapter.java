@@ -42,7 +42,8 @@ public class MyAdapter extends ArrayAdapter<Player> {
         age.setText("age: "+listOfPlayers.get(position).age);
         money.setText("money: "+listOfPlayers.get(position).worth);
         sport.setText("sport: "+listOfPlayers.get(position).main_sport);
-        ima.setImageDrawable(listOfPlayers.get(position).image.getDrawable());
+        int i=listOfPlayers.get(position).image;
+        ima.setImageResource(i);
         return  single_item_view;
     }
 }

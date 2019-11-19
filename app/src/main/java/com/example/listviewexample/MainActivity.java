@@ -52,4 +52,5 @@ public class MainActivity extends AppCompatActivity  {
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
     // choose successful sportsmen from different sports, make sure to fill Player class before starting
 
+
 }

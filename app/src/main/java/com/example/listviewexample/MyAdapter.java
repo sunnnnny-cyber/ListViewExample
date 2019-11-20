@@ -41,7 +41,21 @@ public class MyAdapter extends ArrayAdapter<Player> {
         age.setText("age: "+listOfPlayers.get(position).age);
         money.setText("money: "+listOfPlayers.get(position).worth);
         sport.setText("sport: "+listOfPlayers.get(position).main_sport);
-        ima.setImageDrawable(listOfPlayers.get(position).image.getDrawable());
+        ima.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 /*
+    * final Intent intent = new Intent();
+intent.setAction(Intent.ACTION_VIEW);
+intent.setData(searchUri);
+intent.setPackage("org.wikipedia");*/
+            }
+        });
+        int i=listOfPlayers.get(position).image;
+        ima.setImageResource(i);
         return  single_item_view;
     }
+
+
+
 }

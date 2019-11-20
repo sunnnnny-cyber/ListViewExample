@@ -45,11 +45,12 @@ public class MainActivity extends AppCompatActivity  {
         listPlayers.add(new Player("Dina Averina",21,(long)16000000,"Rhythmic Gymnastics",R.drawable.evereena));
         listPlayers.add(new Player("Shiwen Ye",23,(long)16000000,"Swimming",R.drawable.shiwen));
         listPlayers.add(new Player("Jike Zhang",31,(long)20000000,"Table Tennis",R.drawable.jike));
-        listPlayers.add(new Player("Miro Jurisic",44,(long)20000000,"Tennis",R.drawable.miro));
+        listPlayers.add(new Player("Miro Jurisic",79,(long)20000000,"Tennis",R.drawable.miro));
         listPlayers.add(new Player("Rookie Song",22,(long)200088888,"Electonic Sport",R.drawable.yijin));
         listPlayers.add(new Player("Tetsuya Kuroko",16,(long)2000,"Basketball",R.drawable.kuroko));
     }
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
     // choose successful sportsmen from different sports, make sure to fill Player class before starting
+
 
 }

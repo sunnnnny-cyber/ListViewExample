@@ -1,7 +1,9 @@
 package com.example.listviewexample;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +16,10 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class MyAdapter extends ArrayAdapter<Player> {
+public class MyAdapter extends ArrayAdapter<Player> implements View.OnClickListener {
     List<Player> listOfPlayers;
     Context context;
+    int posi;
 
     public MyAdapter(@NonNull Context context, int resource, @NonNull List<Player> objects) {
         super(context, resource, objects);
@@ -27,6 +30,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+                posi=position;
         View single_item_view = convertView;
         //Using this inflated view, we can get the access to the various UI widgets present in the row item XML file.
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -41,21 +45,25 @@ public class MyAdapter extends ArrayAdapter<Player> {
         age.setText("age: "+listOfPlayers.get(position).age);
         money.setText("money: "+listOfPlayers.get(position).worth);
         sport.setText("sport: "+listOfPlayers.get(position).main_sport);
-        ima.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                 /*
-    * final Intent intent = new Intent();
-intent.setAction(Intent.ACTION_VIEW);
-intent.setData(searchUri);
-intent.setPackage("org.wikipedia");*/
-            }
-        });
+        single_item_view.setOnClickListener(this);
         int i=listOfPlayers.get(position).image;
         ima.setImageResource(i);
         return  single_item_view;
     }
 
 
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(listOfPlayers.get(posi).wiki));
+        if(intent.resolveActivity(getPackageManager())!=null){
+            startActivity(intent);
+        }
 
+
+    }
 }
+
+
+

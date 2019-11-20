@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity  {
         listPlayers.add(new Player("Dina Averina",21,(long)16000000,"Rhythmic Gymnastics",R.drawable.evereena,"https://en.wikipedia.org/wiki/Dina_Averina"));
         listPlayers.add(new Player("Shiwen Ye",23,(long)16000000,"Swimming",R.drawable.shiwen,"https://en.wikipedia.org/wiki/Ye_Shiwen"));
         listPlayers.add(new Player("Jike Zhang",31,(long)20000000,"Table Tennis",R.drawable.jike,"https://en.wikipedia.org/wiki/Zhang_Jike"));
-        listPlayers.add(new Player("Miro Jurisic",79,(long)20000000,"Tennis",R.drawable.miro,"https://cn.linkedin.com/in/miro-jurisic-4678a261"));
+        listPlayers.add(new Player("Miro Jurisic",79,(long)20000000,"Badminton",R.drawable.miro,"https://cn.linkedin.com/in/miro-jurisic-4678a261"));
         listPlayers.add(new Player("Rookie Song",22,(long)200088888,"Electonic Sport",R.drawable.yijin,"https://lol.gamepedia.com/Rookie"));
         listPlayers.add(new Player("Tetsuya Kuroko",16,(long)2000,"Basketball",R.drawable.kuroko,"https://hero.fandom.com/wiki/Tetsuya_Kuroko"));
     }

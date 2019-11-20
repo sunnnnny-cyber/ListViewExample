@@ -57,8 +57,8 @@ public class MyAdapter extends ArrayAdapter<Player> implements View.OnClickListe
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(listOfPlayers.get(posi).wiki));
-        if(intent.resolveActivity(getPackageManager())!=null){
-            startActivity(intent);
+        if(intent.resolveActivity(context.getPackageManager())!=null){
+            context.startActivity(intent);
         }
 
 

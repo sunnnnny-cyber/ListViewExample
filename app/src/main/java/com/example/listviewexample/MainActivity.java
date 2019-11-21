@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity  {
         //Todo reference listview
         //  Todo       ListView listView = findViewById();
         ListView ListView = findViewById(R.id.listview);
+
         // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
       //  listPlayers = new ArrayList<Player>();
         //Todo  add custom adapter to listview

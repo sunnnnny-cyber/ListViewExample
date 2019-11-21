@@ -3,6 +3,9 @@ package com.example.listviewexample;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -13,6 +16,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.ListView:
+                ListView ListView = findViewById(R.id.listview);
+                getPlayers();
+                MyAdapter arrayAdapter = new MyAdapter(this,R.layout.single_item,listPlayers);
+                ListView.setAdapter(arrayAdapter);
+                return true;
+            case R.id.GridView:
+                startSettings();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
     List<Player> listPlayers;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +46,14 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
         //Todo reference listview
         //  Todo       ListView listView = findViewById();
-        ListView ListView = findViewById(R.id.listview);
+        /*ListView ListView = findViewById(R.id.listview);
         // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
       //  listPlayers = new ArrayList<Player>();
         //Todo  add custom adapter to listview
         //Todo listView.setAdapter(------);
         getPlayers();
         MyAdapter arrayAdapter = new MyAdapter(this,R.layout.single_item,listPlayers);
-        ListView.setAdapter(arrayAdapter);
+        ListView.setAdapter(arrayAdapter);*/
 
 
     }

@@ -6,7 +6,7 @@
     <CardView
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:cardBackgroundColor="#93a16f"
+        android:cardBackgroundColor="#ffffff"
         android:cardUseCompatPadding="60dp"
 
 

@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -29,11 +31,14 @@ public class MainActivity extends AppCompatActivity  {
             case R.id.ListView:
                 ListView ListView = findViewById(R.id.listview);
                 getPlayers();
-                MyAdapter arrayAdapter = new MyAdapter(this,R.layout.single_item,listPlayers);
-                ListView.setAdapter(arrayAdapter);
+                MyAdapter arrayAdapter1 = new MyAdapter(this,R.layout.single_item,listPlayers);
+                ListView.setAdapter(arrayAdapter1);
                 return true;
             case R.id.GridView:
-                startSettings();
+                GridView GridView = findViewById(R.id.gridview);
+                getPlayers();
+                MyAdapter arrayAdapter2 = new MyAdapter(this,R.layout.single_item,listPlayers);
+                GridView.setAdapter(arrayAdapter2);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

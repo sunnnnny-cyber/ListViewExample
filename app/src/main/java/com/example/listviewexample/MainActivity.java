@@ -51,14 +51,13 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
         //Todo reference listview
         //  Todo       ListView listView = findViewById();
-        /*ListView ListView = findViewById(R.id.listview);
         // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
       //  listPlayers = new ArrayList<Player>();
         //Todo  add custom adapter to listview
         //Todo listView.setAdapter(------);
         getPlayers();
         MyAdapter arrayAdapter = new MyAdapter(this,R.layout.single_item,listPlayers);
-        ListView.setAdapter(arrayAdapter);*/
+        ListView.setAdapter(arrayAdapter);
 
 
     }

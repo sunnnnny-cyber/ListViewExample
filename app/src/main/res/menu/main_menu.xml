@@ -3,5 +3,7 @@
     <item android:id="@+id/ListView"
         android:title="List" />
     <item android:id="@+id/GridView"
-        android:title="Grid" />
+        android:title="Grid2" />
+    <item android:id="@+id/GridView2"
+        android:title="Grid3" />
 </menu>
